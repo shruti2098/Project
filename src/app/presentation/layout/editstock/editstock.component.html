@@ -1,0 +1,61 @@
+<h1 align="center">Add Medicine</h1>
+<div>
+   <form [formGroup]="Medicine" (ngSubmit)="onSubmit()" >
+    <div class="mt-5  "><br>
+      <div class="form-row ">
+         <div class="col-md-3 box">
+            <label>id</label>
+            <input type="number" formControlName="id" class="form-control" placeholder="Enter id"> 
+               <div class="form-row">
+                  <div class="form-group col-md-6">
+                     <label>Name</label>   
+                     <input type="text" formControlName="name" class="form-control" placeholder="Enter Name">               
+                     <span *ngIf="f['name']?.errors?.['required'] && f['name']?.touched ">*This field is invalid</span>
+                  </div>
+                     <div class="form-group col-md-6">
+                  <label>Type</label>
+                     <input type="text" formControlName="type" class="form-control" placeholder="Enter type">               
+                     <span *ngIf="f['type']?.errors?.['required'] && f['type']?.touched ">*This field is invalid</span>
+               </div>
+                  </div>
+                  <div class="form-row">
+               <div class="form-group col-md-6">
+                  <label>UnitPrice</label>              
+                     <input type="number" formControlName="unitPrice" class="form-control" placeholder="Enter UnitPrice">               
+                     <span *ngIf="f['unitPrice']?.errors?.['required'] && f['unitPrice']?.touched ">*This field is invalid</span>                                         
+                  </div>
+               <div class="form-group col-md-6">
+                  <label>Manufacturer</label>               
+                  <input type="text" formControlName="manufacturer" class="form-control" placeholder="Enter Manufacturer">               
+                        <span *ngIf="f['manufacturer']?.errors?.['required'] && f['manufacturer']?.touched ">*This field is invalid</span>                                            
+               </div></div>               
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label>Quantity</label>             
+                   <input type="number" formControlName="quantity" class="form-control" placeholder="Enter Quantity">               
+                         <span *ngIf="f['quantity']?.errors?.['required'] && f['quantity']?.touched ">*This field is invalid</span>                   
+                </div>
+                <div class="form-group col-md-6">
+                   <label>Description</label>
+                   <input type="text" formControlName="description" class="form-control" placeholder="Enter Description">               
+                         <span *ngIf="f['description']?.errors?.['required'] && f['description']?.touched ">*This field is invalid</span>
+                </div></div>
+             <div class="form-row">
+                <div class="form-group col-md-4">
+                   <label>ExpiryDate</label>
+                   <input type="date" formControlName="expiryDate" class="form-control" placeholder="Enter ExpiryDate">               
+                         <span *ngIf="f['expiryDate']?.errors?.['required'] && f['expiryDate']?.touched ">*This field is invalid</span>                   
+                        <br>
+                         <button type="submit " class="btn btn-primary mb-2" >Update</button>
+                </div>
+             </div>             
+            <br><br>
+                  
+         </div>
+        
+      </div>
+      </div>
+   </form>
+</div>   
+<!-- {{Medicine.value|json}} -->
+   

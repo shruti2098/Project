@@ -1,0 +1,37 @@
+<div class="register-form">
+    <form [formGroup]="registerform" (ngSubmit)="onSubmit()">
+      <h1>Register</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="username" placeholder="username" autocomplete="nope" formControlName="username">
+          <span *ngIf="f['username']?.errors?.['required'] && f['username']?.touched ">*This field is required</span>
+        </div>
+        <div class="input-field">
+          <input type="password" placeholder="Password" autocomplete="new-password" formControlName="password">
+          <span *ngIf="f['password']?.errors?.['required'] && f['password']?.touched ">*This field is required</span>
+        </div>
+        <div class="input-field">
+            <input type="text" placeholder="email" autocomplete="email" formControlName="email">
+            <span *ngIf="f['email']?.errors?.['required'] && f['email']?.touched ">*This field is required</span>
+          </div>
+          <div class="input-field">
+            <input type="number" placeholder="mobileno" autocomplete="mobileno" formControlName="mobileno">
+            <span *ngIf="f['mobileno']?.errors?.['required'] && f['mobileno']?.touched  ">*This field is required</span>
+            <!-- <span style="color: red;" *ngIf="formControls['mobileno']?.errors?.['pattern']">Mobile Number must be 10                digit*</span> -->
+          </div>
+          <div class="input-field">
+            <label>BirthDate</label>
+            <input type="date"  placeholder="birthdate" autocomplete="birthdate" formControlName="birthdate">
+            
+            <span *ngIf="f['birthdate']?.errors?.['required'] && f['birthdate']?.touched ">*This field is required</span>
+          </div>            
+      </div>
+      <div class="action">
+        <button>Create Account</button>
+      </div>
+      <label style="margin-left: 200px;">New User?</label><a routerLink='login'>Login</a>
+    </form>
+   </div>
+   
+   
+   

@@ -1,0 +1,32 @@
+<form class="format" [formGroup]="Customer" (ngSubmit)="onSubmit()">
+    <div class="box">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">FullName</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCustomerName">CustomerName</label>
+          <input type="customer" class="form-control" id="inputCustomerName" placeholder="customer">
+        </div>
+      </div> 
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Mobileno</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Gender</label>
+          <select id="inputState" class="form-control">
+            <option selected>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Age</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+      </div> 
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Submit</button>
+    </div>
+</form>

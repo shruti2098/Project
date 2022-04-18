@@ -1,0 +1,23 @@
+<div class="login-form">
+    <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+      <h1>Login</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="username" placeholder="username" autocomplete="nope" formControlName="username">
+          <span *ngIf="f['username']?.errors?.['required'] && f['username']?.touched ">*This field is required</span>
+        </div>
+        <div class="input-field">
+          <input type="password" placeholder="Password" autocomplete="new-password" formControlName="password">
+          <span *ngIf="f['password']?.errors?.['required'] && f['password']?.touched ">*This field is required</span>
+        </div>
+        
+        <a href="#" class="link" routerLink='/register' style="color: black;">Create an account</a>
+      </div>
+      <div class="action">
+        <button style="color: black;background-color: rgb(241, 199, 165);;">Sign in</button>
+      </div>
+    </form>
+   </div>
+   
+   
+   
